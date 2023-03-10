@@ -27,6 +27,7 @@ public class CustomListTest {
      * check if our current size matches the initial size plus
      one
      */
+
     @Test
     public void addCityTest(){
         list = MockCityList();
@@ -40,5 +41,12 @@ public class CustomListTest {
         list = MockCityList();
         int listSize = list.getCount();
         assertEquals(list.getCount(), listSize);
+    }
+
+    @Test
+    public void hasCityTest(){
+        list = MockCityList();
+        list.addCity(new City("Estevan", "SK"));
+        assertEquals(list.hasCity("Estevan"), true);
     }
 }
